@@ -1,0 +1,18 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	background-color: #68b35c;
+
+	.logo {
+		font-size: 20px;
+		font-weight: bold;
+		color: white;
+	}
+
+	.logout {
+		font-size: 16px;
+		color: white;
+	}
+}

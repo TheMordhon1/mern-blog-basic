@@ -1,34 +1,59 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Home, Login, Register } from '../../pages';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { CreateBlog, DetailBlog, Home, Login, MainApp, Register } from '../../pages';
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <Home />,
-		// children: [
-		//   {
-		//     path: "team",
-		//     element: <Team />,
-		//     loader: teamLoader,
-		//   },
-		// ],
-	},
-	{
-		path: "/login",
-		element: <Login />,
-	},
-	{
-		path: "/register",
-		element: <Register />,
-	},
-]);
+// const router = createBrowserRouter([
+// 	{
+// 		path: "/",
+// 		element: <MainApp />,
+// 		// children: [
+// 		// 	{
+// 		// 		path: '/',
+// 		// 		element: <Home />
+// 		// 	},
+// 		// 	{
+// 		// 		path: '/create-blog',
+// 		// 		element: <CreateBlog />
+// 		// 	},
+// 		// 	{
+// 		// 		path: '/detail-blog',
+// 		// 		element: <DetailBlog />
+// 		// 	},
+// 		// ],
+// 	},
+// 	{
+// 		path: "/login",
+// 		element: <Login />,
+// 	},
+// 	{
+// 		path: "/register",
+// 		element: <Register />,
+// 	},
+// 	{
+// 		path: "/detail-blog",
+// 		element: <DetailBlog />,
+// 	},
+// 	{
+// 		path: "/create-blog",
+// 		element: <CreateBlog />,
+// 	},
+// ]);
 
-const Routes = () => {
+const Routing = () => {
 
 	return (
-		<RouterProvider router={router} />
+		<Router>
+			<Routes>
+				<Route path='/' element={<MainApp />}>
+					<Route path='/' element={<Home />} />
+					<Route path='/create-blog' element={<CreateBlog />} />
+					<Route path='/detail-blog' element={<DetailBlog />} />
+				</Route>
+				<Route path='/login' element={<Login />} />
+				<Route path='/register' element={<Register />} />
+			</Routes>
+		</Router>
 	)
 }
 
-export default Routes
+export default Routing
