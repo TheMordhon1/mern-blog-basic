@@ -1,0 +1,41 @@
+.footer-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	background-color: #68b35c;
+
+	.logo {
+		font-size: 20px;
+		font-weight: bold;
+		color: white;
+	}
+
+	.icons-wrapper {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+
+		.icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: white;
+			height: 30px;
+			width: 30px;
+			border-radius: 9999px;
+
+			svg {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+.copy {
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	padding: 15px 0;
+	background-color: #5e9c54;
+}

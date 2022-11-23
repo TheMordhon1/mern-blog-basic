@@ -1,14 +1,17 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { Header } from '../../components';
+import { Footer, Header } from '../../components';
+import './mainApp.scss'
 
 const MainApp = () => {
 
 	return (
-		<div>
+		<div className='main-app-wrapper'>
 			<Header />
-			<Outlet />
-			<div>Footer</div>
+			<div className='content-wrapper'>
+				<Outlet />
+			</div>
+			<Footer />
 		</div>
 	)
 }
