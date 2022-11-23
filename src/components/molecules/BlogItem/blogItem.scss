@@ -1,0 +1,46 @@
+.blog-item {
+	width: calc(50% - 20px);
+	margin-bottom: 12px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 5px 6px 14px rgba($color: #000000, $alpha: .2);
+	transition: .4 ease;
+
+	&:hover {
+		cursor: pointer;
+		box-shadow: 5px 6px 14px rgba($color: #494848, $alpha: .4);
+
+		.image-thumb {
+			transform: scale(1.2);
+		}
+	}
+
+	.image-thumb-wrapper {
+		overflow: hidden;
+		height: 200px;
+
+		.image-thumb {
+			object-fit: cover;
+			width: 100%;
+			transition: .4s ease
+		}
+	}
+
+	.content-detail {
+		padding: 16px;
+
+		.title {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.author {
+			font-size: 14px;
+			color: #bababa;
+		}
+
+		.body {
+			margin-top: 18px;
+		}
+	}
+}
